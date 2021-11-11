@@ -1,0 +1,7 @@
+<h1>YELP!</h1>
+<ul >
+  <% @restaurants.each do |restaurant| %>
+  <li>Name: <%= restaurant.name %> - Address: <%= restaurant.address %><br> 📞 <%= restaurant.phone_number %> - Type: <% restaurant.category %></li>
+<% end %>
+</ul>
+<%= link_to "Add a new restaurant", new_restaurant_path %>
